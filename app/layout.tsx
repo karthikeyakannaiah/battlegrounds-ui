@@ -2,14 +2,7 @@
 import "./globals.css";
 import { AuthProvider } from "./AuthContext";
 import NavBarComponent from "@/components/NavBarComponent";
-// import Bebas_Neue from "next/font/google";
-
-// // Load Bebas Neue font
-// const bebasNeue = Bebas_Neue({
-//   subsets: ["latin"], // Choose the subset you need
-//   weight: ["400"], // Bebas Neue only supports 400
-//   variable: "--font-bebas-neue", // Define a CSS variable
-// });
+// import AuthWrapper from '@/components/AuthWrapper';
 
 
 export default function RootLayout({
@@ -22,7 +15,9 @@ export default function RootLayout({
       <body className="bg-zinc-50 font-bebas">
           <AuthProvider>
             <NavBarComponent />
-            {children}
+            {/* <AuthWrapper> */}
+              {children}
+            {/* </AuthWrapper> */}
           </AuthProvider>
       </body>
     </html>
